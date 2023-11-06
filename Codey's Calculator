@@ -1,0 +1,41 @@
+// Write your code here 
+class Calculator(val name:String){
+  init{
+    println("$name's Calculator")
+  }
+  //adding function
+  fun add(num1:Int, num2:Int): Int{
+    return num1 + num2
+  }
+  //subtraction function
+  fun subtract(num1:Int, num2:Int):Int{
+    return num1 - num2
+  }
+  //Multiplication function
+  fun multiply(num1:Int, num2:Int):Int{
+    return num1 * num2
+  }
+  //Division function 
+  fun divide(num1:Int, num2:Int):Any{
+    if(num2 == 0){
+      return "Error! You cannot divide by zero."
+    }
+    else{
+      return num1 / num2
+    }
+  }
+  //Power function 
+  fun power(num1: Int, num2: Int): Int {
+    var result = 1
+
+    for (i in 1..num2) {
+      result *= num1
+    } 
+    return result
+  }  
+}
+//Main method
+fun main(){
+    var myCalculator = Calculator("Codey")
+    println(myCalculator.add(10,15)) 
+}
